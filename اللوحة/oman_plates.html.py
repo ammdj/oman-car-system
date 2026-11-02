@@ -89,3 +89,13 @@ elif page == "البحث والمطابقة الميدانية":
                 st.markdown(f"<div style='background-color: #005500; padding: 15px; border-radius: 5px; text-align: center;'>🎯 تم العثور على تطابق!<br><b>المركبة تعود لقريبك: {db[target_plate]}</b></div>", unsafe_allow_html=True)
             else:
                 st.markdown("<div style='background-color: #550000; padding: 15px; border-radius: 5px; text-align: center;'>❌ لم يتم العثور على أي تطابق في قاعدة البيانات المحلية.</div>", unsafe_allow_html=True)
+# كود لإخفاء العلامة المائية وشعار Streamlit تماماً ليتناسب مع الهاتف بشكل احترافي
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            .viewerBadge_container__1QS1Z {display: none !important;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
